@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center"> <p style="color:white;">RegistrAPP Duoc:</p></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<p></p>
+<ion-content>
+  <p></p>
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]= "formularioLogin">
+        <ion-item>
+          <ion-label position="floating"style="color:blue;">usuario</ion-label>
+          <ion-input formControlName="usuario"></ion-input>
+        </ion-item>
+        <p></p>
+        <ion-item>
+          <ion-label position="floating"style="color:blue;">contraseña</ion-label>
+          <ion-input formControlName="contraseña" type="password"></ion-input>
+        </ion-item>
+      </form>
+        
+    </ion-card-content>
+
+  </ion-card>
+  <p></p>
+  <ion-button expand="block" onclick="MuestraMensajeCarga();" (click)= "ingresar()" >
+    INICIAR SESION 
+
+  </ion-button>
+
+  <p></p>
+
+  <ion-button expand="block" onclick="MuestraMensajeCarga2();" [routerLink]= "['/register']" >
+    REGISTRARSE 
+
+  </ion-button>
+  <p></p>
+  <ion-button expand="block" [routerLink]= "['/recuperar']" >
+    RESTABLECER CONTRASEÑA
+
+  </ion-button>
+  <p></p>
+
+
+  
+</ion-content>
+<ion-footer>
+  
+  <ion-list-header>
+    <ion-button >
+      <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+    </ion-button>  
+    <ion-button >
+      <ion-icon name="alert-circle-outline"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-list-header>
+</ion-footer>

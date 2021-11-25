@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center"> <p style="color:white;"></p>Bienvenido </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <img src="https://www.disenoarquitectura.cl/wp-content/uploads/2019/07/disenoarquitectura.cl-duoc-sanjoaquin-sabbagh-1.jpg">
+    </ion-thumbnail>
+    <ion-label class="ion-text-wrap"> Usted se encuentra en: Sede San Joaquin</ion-label>
+  </ion-item>
+  <p></p>
+  <ion-list-header>
+    <ion-label>Asistencia:</ion-label>
+    <ion-col>
+      <div class="ion-text-justify">
+        Podra ver su asistencia.
+      </div>
+    </ion-col>
+    <ion-button>
+      <ion-button [routerLink]= "['/asistencia']" >
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-button>
+  </ion-list-header>
+  <p></p>
+  <ion-list-header>
+    <ion-label>Registrar Asistencia:</ion-label>
+    <ion-col>
+      <div class="ion-text-justify">
+        Podra registrar su asistencia.
+      </div>
+    </ion-col>
+    <ion-button>
+      <ion-button [routerLink]= "['/regasistencia']" >
+        <ion-icon name="person-add-outline"></ion-icon>
+
+      </ion-button>
+    </ion-button>
+  </ion-list-header>
+  <p></p>
+
+</ion-content>
+<ion-footer>
+  <ion-button expand="block" color="danger" [routerLink]= "['/login']" >
+    CERRAR SESION
+  </ion-button>
+  <ion-footer>
+  
+    <ion-list-header>
+      <ion-button >
+        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+      </ion-button>  
+      <ion-button >
+        <ion-icon name="alert-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-list-header>
+  </ion-footer>
+</ion-footer>  

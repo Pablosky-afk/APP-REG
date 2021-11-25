@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center"> <p style="color:white;">Registrese aqui</p></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <p></p>
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]= "formularioRegister">
+        <ion-item>
+          <ion-label position="floating" style="color:blue;" >Nombre de usuario*</ion-label>
+          <ion-input formControlName="usuario"></ion-input>
+        </ion-item>
+        <p></p>
+        <ion-item>
+          <ion-label position="floating"style="color:blue;" >Contraseña*</ion-label>
+          <ion-input formControlName="contraseña" type="password"></ion-input>
+        </ion-item>
+        <p></p>
+        <ion-item>
+          <ion-label position="floating"style="color:blue;">Confirme su contraseña*</ion-label>
+          <ion-input formControlName="confirme la contraseña" type="password"></ion-input>
+        </ion-item>
+      </form>
+        
+    </ion-card-content>
+
+  </ion-card>
+  <p></p>
+  <ion-button expand="block" (click)= "registrarse()" >
+    REGITRARSE
+  </ion-button>
+  <p></p>
+
+  <ion-button expand="block" [routerLink]= "['/login']" >
+    CANCELAR 
+  </ion-button> 
+
+</ion-content>
+<ion-footer>
+  
+  <ion-list-header>
+    <ion-button >
+      <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+    </ion-button>  
+    <ion-button >
+      <ion-icon name="alert-circle-outline"></ion-icon>
+    </ion-button>
+    <ion-button>
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-list-header>
+</ion-footer>

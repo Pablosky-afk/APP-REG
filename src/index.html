@@ -17,6 +17,55 @@
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <script type="module">
+    import {loadingController} from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.loadingController = loadingController;
+    </script>
+    <script>
+
+    async function MuestraMensajeCarga() {
+
+      const loading = await loadingController.create({
+
+        message: 'Iniciando sesion',
+
+        duration: 1000
+
+      });
+
+
+
+      await loading.present();
+
+      const { role, data } = await loading.onDidDismiss();
+
+      window.location.href="/inicio";
+
+    }
+
+
+
+    async function MuestraMensajeCarga2() {
+
+      const loading = await loadingController.create({
+
+        message: 'Espere...',
+
+        duration: 1000
+
+      });
+
+
+
+      await loading.present();
+
+      const { role, data } = await loading.onDidDismiss();
+
+      window.location.href="/register";
+
+    }
+
+  </script>
 </head>
 
 <body>
